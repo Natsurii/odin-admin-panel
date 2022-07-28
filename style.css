@@ -18,6 +18,28 @@ html {
 }
 
 body {
+    height: 100vh;
+    width: 100vw;
     background: var(--background-color);
     font-size: 1.8rem;
+    display: grid;
+    grid-template: 1fr 6fr / 1fr 5fr;
+    grid-template-areas: 
+    "sb head"
+    "sb mc";
+}
+
+.header{
+    grid-area: head;
+    box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+    grid-area: sb;
+    background: var(--primary-color);
+
+}
+
+.main-content {
+    grid-area: mc;
 }
