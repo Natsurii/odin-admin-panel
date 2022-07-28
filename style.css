@@ -1,0 +1,23 @@
+
+
+:root {
+    --font-color: #2E282A;
+    --background-color: #F7ECE1;
+    --primary-color: #347FC4;
+    --secondary-color: #00A896;
+    --accent-color: #02C39A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 61.5%;
+}
+
+body {
+    background: var(--background-color);
+    font-size: 1.8rem;
+}
