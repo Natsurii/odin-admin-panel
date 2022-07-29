@@ -60,6 +60,44 @@ header{
     background: transparent;
 }
 
+.accounts {
+    display: flex;
+    padding: 1rem 4rem;
+    align-items: center;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+#pfp {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.profile {
+    display: flex;
+    gap: 16px;
+    padding: 1rem 4rem;
+}
+
+.profile-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-options {
+    padding: 1rem 2rem; 
+    border-radius: 15px;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    font-family: 'Prompt', sans-serif;
+    background: var(--secondary-color);
+    color: var(--background-color);
+}
+
+
 /** SideBar */
 .sidebar {
     grid-area: sb;
@@ -96,5 +134,80 @@ nav > ul > li:hover {
 
 /** Main Content */
 .main-content {
+    display: grid;
     grid-area: mc;
+    grid-template: 1fr 1fr / minmax(250px, 80%) 1fr;
+    grid-template-areas: 
+    "art cl"
+    "art ul";
+}
+
+.articles {
+    display: grid;
+    grid-area: art;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+
+.story {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    margin: 2rem 2.5rem;
+    padding: 1.5rem 2rem;
+    font-size: 1.4rem;
+    border-radius: 15px;
+    background: var(--secondary-color);
+    box-shadow: 0px 5px 12px var(--font-color);
+}
+
+.story:hover{
+    background-color: var(--accent-color);
+}
+.story h3{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+}
+.story > p {
+    text-align: justify;
+}
+
+.reactions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+.reaction#heart:hover {
+    color: #CA2E55
+}
+.reaction#comment:hover {
+    color: #E7F59E;
+}
+
+.reaction#share:hover {
+    color: #FFB997;
+}
+.classified, .userlist {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    margin: 2rem;
+    border-radius: 15px;
+    color: var(--background-color);
+}
+
+.userprofile {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    gap: 8px;
+}
+.userprofile > span > p {
+    font-size: 1rem;
+}
+.classified {
+    grid-area: cl;
+}
+
+.userlist {
+    grid-area: ul;
 }
