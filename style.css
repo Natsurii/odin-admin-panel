@@ -24,7 +24,7 @@ body {
     background: var(--background-color);
     font-size: 1.8rem;
     display: grid;
-    grid-template: 1fr 6fr / 250px 5fr;
+    grid-template: 1fr 4fr / 250px 5fr;
     grid-template-areas: 
     "sb head"
     "sb mc";
@@ -38,12 +38,29 @@ body {
   'opsz' 24
 }
 
+/** Header */
 header{
     grid-area: head;
     box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template: 1fr 1.5fr / 2fr 1fr;
 }
 
+.searchbar {
+    display: flex;
+    padding: 1rem 4rem;
+    align-items: center;
+    gap: 16px;
+}
 
+#search {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 15px;
+    background: transparent;
+}
+
+/** SideBar */
 .sidebar {
     grid-area: sb;
     display: grid;
@@ -76,6 +93,8 @@ nav > ul > li {
 nav > ul > li:hover {
     background: var(--accent-color);
 }
+
+/** Main Content */
 .main-content {
     grid-area: mc;
 }
